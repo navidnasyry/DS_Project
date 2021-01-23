@@ -1,8 +1,7 @@
 #ifndef _VECTOR12324
-
 #define _VECTOR12324
 
-
+#include <iostream>
 
 using namespace std;
 template<class T>
@@ -161,7 +160,7 @@ template<class T>
 		T my_T = this->data[index];
 		return my_T;
 	}
-	return NULL;
+	return nullptr;
 }
 
 

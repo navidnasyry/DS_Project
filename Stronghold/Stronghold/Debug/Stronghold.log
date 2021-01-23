@@ -1,0 +1,16 @@
+﻿  Castle.cpp
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(62): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(71): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(92): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(102): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(123): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
+  Map.cpp
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(62): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(71): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(92): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(102): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(123): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(27): warning C4018: '>=': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(32): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Stronghold.vcxproj -> F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Debug\Stronghold.exe
