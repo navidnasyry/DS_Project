@@ -24,9 +24,6 @@
     <ClCompile Include="Castle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CastleNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector.h">
@@ -45,9 +42,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Castle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CastleNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

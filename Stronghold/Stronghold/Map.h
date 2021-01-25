@@ -1,7 +1,6 @@
 #ifndef MAP_GHJKJHG
 #define MAP_GHJKJHG
 
-#include "Vector.h"
 #include "Castle.h"
 
 
@@ -11,7 +10,7 @@ private:
 	friend class Castle;
 
 
-	size_t number_of_castle;
+	static size_t number_of_castle;
 	Castle* castles;            
 
 
@@ -22,8 +21,8 @@ public:
 	~Map();
 
 	bool addAdge(int castle_1 , int castle_2 , int waight);
-
-
+	bool convertMatrisToEdge(int matrix[] , int n);
+	void deBug();
 
 };
 

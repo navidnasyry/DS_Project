@@ -152,13 +152,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Castle.cpp" />
-    <ClCompile Include="CastleNode.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Stronghold.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Castle.h" />
-    <ClInclude Include="CastleNode.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="QueueLinkedList.h" />

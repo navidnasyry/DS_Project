@@ -1,6 +1,5 @@
 #ifndef CASTLE_HJKJHJHJ
 #define CASTLE_HJKJHJHJ
-#include "Map.h"
 
 class Castle
 {
