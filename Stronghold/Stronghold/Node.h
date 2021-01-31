@@ -7,12 +7,16 @@ class Node
 {
 
 private:
-	T data;
-	Node<T>* next;
 
 	template<class T> friend class StackLinkedList;
 	//template<class T> friend class QueueLinkedList;
-	template<class T> friend class Queue;
+	template<class T> friend class QueueLinkedList;
+
+
+	T data;
+	Node<T>* next;
+
+	
 
 
 
@@ -30,7 +34,8 @@ Node<T>::Node()
  template<class T>
  Node<T>::~Node()
  {
-
+	 next = nullptr;
+	 delete next;
  }
 
 

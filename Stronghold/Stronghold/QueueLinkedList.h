@@ -7,9 +7,11 @@ using namespace std;
 template<class T>
 class QueueLinkedList
 {
+
+	template<class T> friend class Node;
+
 	Node<T> *rear;
 	int size;
-	template<class T> friend class Node;
 
 public:
 	// First => second => third => ... => Rear =>First =>second =>...
@@ -23,11 +25,12 @@ public:
 	T& getFirst();
 	int Size();
 	int Find(const T& target);
-	void print();
+	//void print();
 };
 
 
 template<class T>
+
 QueueLinkedList<T>::QueueLinkedList()
 {
 	this->rear = nullptr;
@@ -152,7 +155,7 @@ int QueueLinkedList<T>::Find(const T& target)
 
 
 
-template<class T>
+/*template<class T>
 void QueueLinkedList<T>::print()
 {
 
@@ -168,7 +171,7 @@ void QueueLinkedList<T>::print()
 	}
 	cout << endl;
 	return;
-}
+}*/
 
 
 

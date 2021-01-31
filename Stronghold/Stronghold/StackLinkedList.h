@@ -28,7 +28,7 @@ public:
 	int size();
 	bool IsEmpty();
 
-	void print();
+	//void print();
 };
 
 template<class T>
@@ -78,7 +78,7 @@ int StackLinkedList<T>::Find(const T& target)
 	return -1;
 }
 
-template<class T>
+/*template<class T>
 void StackLinkedList<T>::print()
 {
 	Node<T> *temp = this->top;
@@ -90,7 +90,7 @@ void StackLinkedList<T>::print()
 	}
 	cout << endl;
 	
-}
+}*/
 
 template<class T>
 StackLinkedList<T>::StackLinkedList()

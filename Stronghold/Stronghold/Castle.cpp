@@ -25,6 +25,8 @@ Castle::Castle()
 
 Castle::~Castle()
 {
+	neighbors = nullptr;
+	delete[] neighbors;
 }
 
 

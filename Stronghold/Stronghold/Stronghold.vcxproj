@@ -151,15 +151,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AVLNode.cpp" />
+    <ClCompile Include="AVLTree.cpp" />
     <ClCompile Include="Castle.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Soldier.cpp" />
+    <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stronghold.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AVLNode.h" />
+    <ClInclude Include="AVLTree.h" />
     <ClInclude Include="Castle.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="QueueLinkedList.h" />
+    <ClInclude Include="Soldier.h" />
     <ClInclude Include="StackLinkedList.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>

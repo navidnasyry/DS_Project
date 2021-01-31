@@ -22,6 +22,8 @@ Map::Map(size_t n_castle)
 
 Map::~Map()
 {
+	castles = nullptr;
+	delete[] castles;
 }
 
 bool Map::addAdge(int castle_1, int castle_2, int weight)

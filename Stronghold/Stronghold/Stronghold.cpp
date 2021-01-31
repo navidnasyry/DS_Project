@@ -1,4 +1,6 @@
 #include <iostream>
+using namespace std;
+
 #include "Map.h"
 #include "QueueLinkedList.h"
 #include "StackLinkedList.h"
@@ -33,6 +35,13 @@ int main()
 	head.deBug();
 	head.convertMatrisToEdge(input , n);
 	head.deBug();
+
+	int time = 0;
+	while (++time)
+	{
+
+	}
+
 
 	return 0;
 }
