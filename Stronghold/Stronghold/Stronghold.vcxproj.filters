@@ -36,6 +36,12 @@
     <ClCompile Include="AVLNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FibonacciHeapTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FibonacciHeapNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector.h">
@@ -63,6 +69,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AVLNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FibonacciHeapTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FibonacciHeapNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

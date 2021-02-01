@@ -14,6 +14,9 @@ Map::Map()
 }
 
 
+
+
+
 Map::Map(size_t n_castle , size_t sp)
 {
 	Map::number_of_castle = n_castle;

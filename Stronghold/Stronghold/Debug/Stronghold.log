@@ -1,13 +1,4 @@
-﻿  AVLTree.cpp
-  Castle.cpp
-  Map.cpp
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(35): warning C4018: '>=': signed/unsigned mismatch
-  Stronghold.cpp
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(62): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(71): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(92): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(102): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(123): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
-  Generating Code...
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\AVLTree.cpp(165): warning C4715: 'AVLTree::remove': not all control paths return a value
+﻿  FibonacciHeapTree.cpp
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\FibonacciHeapTree.cpp(275): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\FibonacciHeapTree.cpp(276): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Stronghold.vcxproj -> F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Debug\Stronghold.exe
