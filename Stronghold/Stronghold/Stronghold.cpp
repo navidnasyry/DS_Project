@@ -5,7 +5,7 @@ using namespace std;
 #include "QueueLinkedList.h"
 #include "StackLinkedList.h"
 #include "Vector.h"
-
+#include "Soldier.h"
 
 
 
@@ -31,11 +31,14 @@ int main()
 		}
 		cout << endl;
 	}
-	Map head(n);
+	int sp;
+	cin >> sp;
+	Map head(n , sp);
 	head.deBug();
 	head.convertMatrisToEdge(input , n);
 	head.deBug();
 
+	
 	int time = 0;
 	while (++time)
 	{

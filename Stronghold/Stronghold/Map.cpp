@@ -3,18 +3,22 @@
 #include "Map.h"
 using namespace std;
 size_t Map::number_of_castle = 0;
+size_t Map::speed_of_soldier = 0;
 
 Map::Map()
 {
 	Map::number_of_castle = 0;
+	Map::speed_of_soldier = 0;
 	this->castles = nullptr;
 	return;
 }
 
 
-Map::Map(size_t n_castle)
+Map::Map(size_t n_castle , size_t sp)
 {
 	Map::number_of_castle = n_castle;
+	Map::speed_of_soldier = sp;
+
 	castles = new Castle[n_castle];
 
 	return;

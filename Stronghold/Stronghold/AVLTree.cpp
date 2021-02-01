@@ -8,12 +8,14 @@
 
 AVLTree::AVLTree()
 {
-
+	this->root = nullptr;
 }
 
 
 AVLTree::~AVLTree()
 {
+	distructor(root);
+	delete root;
 }
 
 void AVLTree::distructor(AVLNode* r)
@@ -68,18 +70,20 @@ AVLNode* AVLTree::doubleRightRotate(AVLNode*& t)
 	return rightRotate(t);
 }
 
-AVLNode* AVLTree::insert(int p , AVLNode* t)
+AVLNode* AVLTree::insert(Soldier new_s , AVLNode* t)
 {
+	int p = new_s.power;
 	if (t == nullptr)
 	{
 		t = new AVLNode;
 		t->key = p;
+		t->data = new_s;
 		t->height = 0;
 		t->left = t->right = nullptr;
 	}
 	else if (p < t->key)
 	{
-		t->left = insert(p, t->left);
+		t->left = insert(new_s, t->left);
 		if (height(t->left) - height(t->right) == 2)
 		{
 			if (p < t->left->key)
@@ -91,7 +95,7 @@ AVLNode* AVLTree::insert(int p , AVLNode* t)
 	}
 	else if (p >= t->key)
 	{
-		t->right = insert(p, t->right);
+		t->right = insert(new_s, t->right);
 		if (height(t->right) - height(t->left) == 2)
 		{
 			if (p > t->right->key)
@@ -166,9 +170,9 @@ void AVLTree::removeSoldier(int power)
 	return;
 }
 
-void AVLTree::insertSoldier(int power)
+void AVLTree::insertSoldier(Soldier new_s)
 {
-	insert(power, root);
+	insert(new_s, root);
 	return;
 }
 
@@ -193,6 +197,19 @@ AVLNode* AVLTree::findMax(AVLNode* t)
 		return findMax(t->right);
 }
 
+void AVLTree::inorder(AVLNode* t)
+{
+	if (t==nullptr)
+		return;
+	inorder(t->left);
+	cout << t->key << " ";
+	inorder(t->right);
+}
 
-
+void AVLTree::display()
+{
+	inorder(root);
+	cout << endl;
+	return;
+}
 

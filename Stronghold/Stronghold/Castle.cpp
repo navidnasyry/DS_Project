@@ -14,6 +14,7 @@ Castle::Castle()
 	int num_of_neighbor = Map::number_of_castle;
 	this->key = create_castle_key();
 	this->neighbors = new int[num_of_neighbor];
+	this->num_of_soldier = 0;
 	for (int i=0 ; i<num_of_neighbor ; i++)
 	{
 		this->neighbors[i] = 0;
@@ -29,4 +30,11 @@ Castle::~Castle()
 	delete[] neighbors;
 }
 
+void Castle::addSoldier(int p)
+{
+	Soldier new_s;
+	new_s.power = p;
+	new_s.castle_key = this->key;
+	avl.insertSoldier(new_s);
+}
 

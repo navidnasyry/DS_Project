@@ -10,7 +10,7 @@ class AVLNode
 
 
 	Soldier data;
-	int key;
+	int key;//power of soldier
 	AVLNode* left;
 	AVLNode* right;
 	int height;
