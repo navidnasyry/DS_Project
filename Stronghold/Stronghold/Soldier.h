@@ -11,13 +11,16 @@ class Soldier
 	friend class FibonacciHeapTree;
 
 	
-	static size_t speed;
+	size_t speed;
 	size_t castle_key;
 	int power;
 
 public:
 	Soldier();
+	Soldier(int p);
 	~Soldier();
+	Soldier(const Soldier&);
+	Soldier(Soldier&&);
 
 	Soldier& operator=(const Soldier& r_val);
 };

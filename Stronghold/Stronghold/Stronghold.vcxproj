@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Army.cpp" />
     <ClCompile Include="AVLNode.cpp" />
     <ClCompile Include="AVLTree.cpp" />
     <ClCompile Include="Castle.cpp" />
@@ -162,6 +163,7 @@
     <ClCompile Include="Stronghold.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Army.h" />
     <ClInclude Include="AVLNode.h" />
     <ClInclude Include="AVLTree.h" />
     <ClInclude Include="Castle.h" />

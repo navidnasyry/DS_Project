@@ -1,4 +1,4 @@
 ﻿  FibonacciHeapTree.cpp
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\FibonacciHeapTree.cpp(275): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\FibonacciHeapTree.cpp(275): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\FibonacciHeapTree.cpp(276): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Stronghold.vcxproj -> F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Debug\Stronghold.exe

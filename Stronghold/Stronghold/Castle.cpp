@@ -38,3 +38,10 @@ void Castle::addSoldier(int p)
 	avl.insertSoldier(new_s);
 }
 
+bool Castle::sendArmy()
+{
+
+
+	return true;
+}
+

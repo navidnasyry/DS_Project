@@ -6,7 +6,7 @@ AVLNode::AVLNode()
 {
 	left = nullptr;
 	right = nullptr;
-
+	return;
 
 }
 

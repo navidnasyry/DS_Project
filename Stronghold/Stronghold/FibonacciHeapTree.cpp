@@ -272,7 +272,7 @@ void FibonacciHeapTree::display()
 void FibonacciHeapTree::Consolidate()
 {
 	int t1;
-	float t2 = (log(nH) / log(2));
+	float t2 = static_cast<int>(floor(log(static_cast<double>(nH)) / log(static_cast<double>(1 + sqrt(static_cast<double>(5))) / 2)));// (log(nH) / log(2));
 	int t3 = t2;
 	FibonacciHeapNode** arr = new FibonacciHeapNode * [t3];
 	for (int i=0 ; i<t3 ; i++)
@@ -280,8 +280,8 @@ void FibonacciHeapTree::Consolidate()
 		arr[i] = nullptr;
 	}
 	FibonacciHeapNode* p1 = Min;
-	FibonacciHeapNode* p2;
-	FibonacciHeapNode* p3;
+	FibonacciHeapNode* p2 = nullptr;
+	FibonacciHeapNode* p3 = nullptr;
 	FibonacciHeapNode* p4 = p1;
 	do 
 	{
@@ -290,11 +290,15 @@ void FibonacciHeapTree::Consolidate()
 		while (arr[t1] != nullptr)
 		{
 			p2 = arr[t1];
-			if (p1->power > p2->power)
+			if (p1 != nullptr && p2!=nullptr)
 			{
-				p3 = p1;
-				p1 = p2;
-				p2 = p3;
+				if (p1->power > p2->power)
+				{
+					p3 = p1;
+					p1 = p2;
+					p2 = p3;
+				}
+
 			}
 			if (p2 == Min)
 				Min = p1;

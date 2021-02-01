@@ -10,7 +10,7 @@ class Vector
 private:
 	long long int allocator_type;//total size of vector
 	long long int size_type;//fill size of vector
-	T *data = new T();
+	T* data;
 	
 
 public:
@@ -45,7 +45,7 @@ public:
 	long long int erase(size_t index);
 	
 	void pop_back();
-	
+	T& Top();
 	void pop_front();
 	
 
@@ -53,10 +53,27 @@ public:
 	
 	long long int capacity();
 	
+	bool isEmpty();
 
-	void print();
+	//void print();
 	
 };
+
+template<class T>
+bool Vector<T>::isEmpty()
+{
+	if (data)
+	{
+		return false;
+	}
+	return true;
+}
+
+template<class T>
+T& Vector<T>::Top()
+{
+	return this->data[0];
+}
 
 template<class T>
  Vector<T> :: Vector<T>()
@@ -449,7 +466,7 @@ long long int Vector<T> :: capacity()
 	return this->size_type;
 }
 
-
+/*
 template<class T>
 void Vector<T> :: print()
 {
@@ -460,7 +477,7 @@ void Vector<T> :: print()
 	}
 	cout << endl;
 	return;
-}
+}*/
 
 
 

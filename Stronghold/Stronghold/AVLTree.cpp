@@ -164,10 +164,10 @@ AVLNode* AVLTree::remove(int p, AVLNode* t)
 
 }
 
-void AVLTree::removeSoldier(int power)
+Soldier AVLTree::removeSoldier(int power)
 {
-	remove(power, root);
-	return;
+	Soldier s = remove(power, root)->data;
+	return s;
 }
 
 void AVLTree::insertSoldier(Soldier new_s)
@@ -205,11 +205,36 @@ void AVLTree::inorder(AVLNode* t)
 	cout << t->key << " ";
 	inorder(t->right);
 }
+void AVLTree::inorderUpdate(AVLNode* t)
+{
+	if (t == nullptr)
+		return;
+	inorderUpdate(t->left);
+	if (t->height == 0)
+	{
+		leaves.add_front(*t);
+	}
+	inorderUpdate(t->right);
+}
 
 void AVLTree::display()
 {
 	inorder(root);
 	cout << endl;
 	return;
+}
+
+void AVLTree::updateLeavese()
+{
+	inorderUpdate(root);
+	return;
+}
+
+Soldier AVLTree::popLeaf()
+{
+	int pop_power = leaves.Top().key;
+	leaves.pop_back();
+	Soldier s = this->removeSoldier(pop_power);
+	return s;
 }
 
