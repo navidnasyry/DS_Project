@@ -16,5 +16,6 @@ AVLNode::~AVLNode()
 
 	left = nullptr;
 	right = nullptr;
+	//this->data.~Soldier();
 
 }

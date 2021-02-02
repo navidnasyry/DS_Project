@@ -5,11 +5,11 @@
 #include "AVLNode.h"
 #include "Vector.h"
 
-
 using namespace std;
 
 class AVLTree
 {
+	//friend class Map;
 	friend class AVLNode;
 	friend class Soldier;
 
@@ -32,6 +32,8 @@ public:
 	AVLNode* findMin(AVLNode* t);
 	AVLNode* findMax(AVLNode* t);
 	void inorder(AVLNode* t);
+	void inorderPassToFT(AVLNode* t, int c);
+	void fillFTree(int index);
 	void inorderUpdate(AVLNode* t);
 	void display();
 	bool isLeavesIsEmpty();

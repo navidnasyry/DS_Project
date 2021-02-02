@@ -1,6 +1,7 @@
 #include <cmath>
 #include "AVLTree.h"
-
+#include "Castle.h"
+#include "Map.h"
 
 #define max(a,b) a>b?a:b
 
@@ -73,13 +74,24 @@ AVLNode* AVLTree::doubleRightRotate(AVLNode*& t)
 AVLNode* AVLTree::insert(Soldier new_s , AVLNode* t)
 {
 	int p = new_s.power;
-	if (t == nullptr)
+	if (this->root == nullptr)
 	{
-		t = new AVLNode;
+		t = new AVLNode();
 		t->key = p;
 		t->data = new_s;
 		t->height = 0;
 		t->left = t->right = nullptr;
+		this->root = t;
+		return t;
+	}
+	if (t == nullptr)
+	{
+		t = new AVLNode();
+		t->key = p;
+		t->data = new_s;
+		t->height = 0;
+		t->left = t->right = nullptr;
+		//this->root = t;
 	}
 	else if (p < t->key)
 	{
@@ -116,7 +128,7 @@ AVLNode* AVLTree::remove(int p, AVLNode* t)
 	AVLNode* temp;
 	if (t == nullptr)
 	{
-		throw "Not Found !";
+		return nullptr;
 	}
 	else if (p < t->key)
 		t->left = remove(p, t->left);
@@ -132,36 +144,43 @@ AVLNode* AVLTree::remove(int p, AVLNode* t)
 	else
 	{
 		temp = t;
+		
 		if (t->left == nullptr)
 			t = t->right;
 		else if (t->right == nullptr)
 			t = t->left;
 		delete temp;
+		temp = nullptr;
 	}
+	if (t == nullptr)
+		return t;
 
-	t->height = max(height(t->left), height(t->right)) + 1;
+	//if (t != nullptr) {
+		t->height = max(height(t->left), height(t->right)) + 1;
 
-	if (height(t->left) - height(t->right) == 2)
-	{
-		if (t->left)
+		if (height(t->left) - height(t->right) == 2)
 		{
-			if (height(t->left->left) - height(t->left->right) == 1)
-				return rightRotate(t);
-		}
-		
+			if (t->left)
+			{
+				if (height(t->left->left) - height(t->left->right) == 1)
+					return rightRotate(t);
+			}
+
 			return doubleRightRotate(t);
-	}
-	else if (height(t->right) - height(t->left) == 2)
-	{
-		if (t->right)
-		{
-			if (height(t->right->right) - height(t->right->left) == 1)
-				return leftRotate(t);
-
 		}
-		return doubleLeftRotate(t);
-	}
+		else if (height(t->right) - height(t->left) == 2)
+		{
+			if (t->right)
+			{
+				if (height(t->right->right) - height(t->right->left) == 1)
+					return leftRotate(t);
 
+			}
+			return doubleLeftRotate(t);
+		}
+	//}
+	else
+		return nullptr;
 }
 
 Soldier AVLTree::removeSoldier(int power)
@@ -173,7 +192,7 @@ Soldier AVLTree::removeSoldier(int power)
 
 void AVLTree::insertSoldier(Soldier new_s)
 {
-	insert(new_s, root);
+	this->root = insert(new_s, root);
 	return;
 }
 
@@ -206,6 +225,24 @@ void AVLTree::inorder(AVLNode* t)
 	cout << t->key << " ";
 	inorder(t->right);
 }
+
+void AVLTree::inorderPassToFT(AVLNode* t, int index)
+{
+	if (t == nullptr)
+		return;
+	inorder(t->left);
+	Soldier a = t->data;
+	/////////////////////////////////////////////////////////////big bug
+
+	inorder(t->right);
+}
+
+void AVLTree::fillFTree(int index)
+{
+	inorderPassToFT(root,  index);
+	return;
+}
+
 void AVLTree::inorderUpdate(AVLNode* t)
 {
 	if (t == nullptr)

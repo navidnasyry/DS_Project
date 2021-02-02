@@ -2,6 +2,7 @@
 #define _VECTOR12324
 
 #include <iostream>
+#include "Soldier.h"
 
 using namespace std;
 template<class T>
@@ -40,7 +41,7 @@ public:
 	long long int insert(long long int index, const T& val);
 	
 
-	long long int find(const T& target);//return index
+	long long int find( T& target);//return index
 	
 	long long int erase(size_t index);
 	
@@ -338,7 +339,7 @@ long long int Vector<T> :: insert(long long int index, const T& val)
 
 
 template<class T>
-long long int Vector<T> :: find(const T& target)//return index
+long long int Vector<T> :: find( T& target)//return index
 {
 	for (size_t i = 0; i < size_type; i++)
 	{

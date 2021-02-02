@@ -9,22 +9,22 @@ class Map
 {
 private:
 	friend class Castle;
+	//friend class AVLTree;
 
-
-	Castle* castles;            
 	Vector<Army> all_army;
-
+	Castle* castles;
 
 public:
 
 	//fill from input : 
+	
 	static int capacity_of_exit;//zarfiat khoroji az har ghale
 	static size_t number_of_castle;
 	static size_t speed_of_soldier;
 
 
 	Map();
-	Map(size_t n_castle , size_t sp);
+	Map(size_t n_castle , size_t sp , int capacity_of_e);
 	~Map();
 
 	bool reviveSoldierFromStack(int index);
@@ -37,6 +37,11 @@ public:
 	bool updateCastle(int caslte_key);
 	void attackArmy(int index);
 	void checkArmy();
+	void inputSoldier(int index , Soldier s);
+	void writeBFS();
+	void writeInorderAVL();
+
+
 
 };
 

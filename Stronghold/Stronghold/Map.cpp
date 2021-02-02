@@ -15,6 +15,7 @@ Map::Map()
 {
 	Map::number_of_castle = 0;
 	Map::speed_of_soldier = 0;
+	Map::capacity_of_exit = 0;
 	this->castles = nullptr;
 	return;
 }
@@ -23,11 +24,11 @@ Map::Map()
 
 
 
-Map::Map(size_t n_castle , size_t sp)
+Map::Map(size_t n_castle , size_t sp , int capacity_of_ex)
 {
 	Map::number_of_castle = n_castle;
 	Map::speed_of_soldier = sp;
-
+	Map::capacity_of_exit = capacity_of_ex;
 	castles = new Castle[n_castle];
 
 	return;
@@ -54,6 +55,7 @@ bool Map::reviveSoldierFromStack(int index)
 		{
 			Soldier s = castles[i].die_soldier.Pop();
 			castles[i].avl.insertSoldier(s);
+			castles[i].all_in_soldier.push_back(s);
 			castles[i].num_of_soldier_in_castle++;
 		}
 	}
@@ -64,7 +66,26 @@ void Map::enterEnemyFromQueue(int index)
 {
 	castles[index].capacity_of_enter = ceil(static_cast<double>(castles[index].inder_queue.Size()) / (double)castles[index].num_of_soldier_in_castle);
 	//if castle is empty => change owner of key
-	
+	//fill FHtree whit all soldier
+
+	for (int i=0 ; i<castles[index].num_of_soldier_in_castle ; i++)
+	{
+		castles[index].fbTree.addSoldier(castles[index].all_in_soldier[i]);
+	}
+	for (int i = 0; i < castles[index].capacity_of_enter; i++)
+	{
+		Soldier entered_soldier = castles[index].inder_queue.Pop();
+		if (entered_soldier.getCastleKey() == castles[index].landlord_key)//if castle has been faild then:
+		{
+			castles[index].addSoldier(entered_soldier.getPower() , entered_soldier.getCastleKey());
+		}
+		else {
+			castles[index].fbTree.addSoldier(entered_soldier);
+			Soldier defender = castles[index].avl.findDefender(entered_soldier.getPower());
+			castles[index].fbTree.addSoldier(defender);
+		}
+	}
+
 
 
 }
@@ -151,6 +172,51 @@ void Map::BFS()
 
 }
 
+void Map::writeBFS()
+{
+	bool* visited = new bool[Map::number_of_castle];
+	for (int i = 0; i < number_of_castle; i++)
+		visited[i] = false;
+
+
+	QueueLinkedList<int> queue;
+	queue.Push(0);
+	visited[0] = true;
+	int current;
+
+	while (!queue.isEmpty())
+	{
+		current = queue.Pop();
+		cout << current << " ";
+		//call update function :)
+		for (int i = 0; i < number_of_castle; i++)
+		{
+			if (castles[current].neighbors[i] != 0)
+			{
+				if (!visited[i])
+				{
+					visited[i] = true;
+					queue.Push(i);
+				}
+
+			}
+		}
+
+	}
+
+
+
+}
+
+void Map::writeInorderAVL()
+{
+	for (int i=0 ;i< number_of_castle ; i++)
+	{
+		cout << "AVL of castle " << i << " : \n";
+		castles[i].avl.display();
+	}
+}
+
 bool Map::updateCastle(int index)
 {
 	
@@ -189,7 +255,7 @@ void Map::attackArmy(int index)
 			sum_of_neighber_soldier += castles[i].num_of_soldier_in_castle;
 			if (castles[i].num_of_soldier_in_castle > val)
 			{
-				val = castles[i].num_of_soldier_in_castle;
+				val = castles[i].num_of_soldier_in_castle;//sum
 				index_of_castle_have_min_soldier = i;//find index of castle that have min soldier
 			}
 		}
@@ -222,15 +288,17 @@ void Map::attackArmy(int index)
 			//num_of_attacker = num_of_soldier_can_exit * (castles[i].num_of_soldier_in_castle / sum_of_neighber_soldier);
 			//num_of_attacker_uncal -= num_of_attacker;
 			Army new_army(num_of_attacker[i], index, i, castles[index].neighbors[i]);
-			for (int i = 0; i < num_of_attacker[i] + j; i++)
+			for (int k = 0; k< num_of_attacker[i] + j; k++)
 			{
 				//from leaves of AVL tree : 
-				if (castles[i].avl.isLeavesIsEmpty())
+				if (castles[index].avl.isLeavesIsEmpty())
 				{
-					castles[i].avl.updateLeavese();
+					castles[index].avl.updateLeavese();
 				}
-				new_army.addSoldier(castles[i].avl.popLeaf());
-				castles[i].num_of_soldier_in_castle--;
+				Soldier s = castles[index].avl.popLeaf();
+				new_army.addSoldier(s);
+				castles[index].all_in_soldier.erase(castles[index].all_in_soldier.find(s));
+				castles[index].num_of_soldier_in_castle--;
 
 			}
 
@@ -267,6 +335,13 @@ void Map::checkArmy()
 	return;
 }
 
+void Map::inputSoldier(int index, Soldier s)
+{
+	
+	castles[index].addSoldier(s.getPower() , s.getCastleKey());
+	return;
+
+}
 
 
 
