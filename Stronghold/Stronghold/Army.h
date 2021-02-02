@@ -19,7 +19,13 @@ class Army
 
 public:
 	Army();
+	Army(int num_of_soldier, size_t from, size_t attack_to, int distance);
 	~Army();
+	void addSoldier(Soldier s);
+	bool lowDistance(int sp);
+	Soldier popSoldier();
+	bool isEmpty();
+
 };
 
 

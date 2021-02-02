@@ -20,7 +20,7 @@ public:
 	~QueueLinkedList();
 	void Push(const T& new_data);
 	T& Pop();
-
+	bool isEmpty();
 	T& getRear();
 	T& getFirst();
 	int Size();
@@ -28,6 +28,15 @@ public:
 	//void print();
 };
 
+template<class T>
+bool QueueLinkedList<T>::isEmpty()
+{
+	if (this->rear)
+	{
+		return false;
+	}
+	return true;
+}
 
 template<class T>
 

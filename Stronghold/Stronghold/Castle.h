@@ -15,11 +15,12 @@ class Castle
 
 	int* neighbors;
 	size_t key;
-	size_t num_of_soldier;
+	size_t num_of_soldier_in_castle;
 	StackLinkedList<Soldier> die_soldier;
 	float stack_const;//if is 0.5 => in two frame, one soldier exit from stack :)
 	QueueLinkedList<Soldier> inder_queue;
-	static size_t capacity_of_exit;//zarfiat khoroji az har ghale
+	
+	size_t capacity_of_enter;// num of soldier back the door / num of soldier in the castle
 	AVLTree avl;
 	FibonacciHeapTree fbTree;
 

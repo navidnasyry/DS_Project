@@ -1,4 +1,4 @@
-
+#include <cmath>
 #include "AVLTree.h"
 
 
@@ -167,6 +167,7 @@ AVLNode* AVLTree::remove(int p, AVLNode* t)
 Soldier AVLTree::removeSoldier(int power)
 {
 	Soldier s = remove(power, root)->data;
+	
 	return s;
 }
 
@@ -224,6 +225,15 @@ void AVLTree::display()
 	return;
 }
 
+bool AVLTree::isLeavesIsEmpty()
+{
+	if (leaves.isEmpty())
+	{
+		return true;
+	}
+	return false;
+}
+
 void AVLTree::updateLeavese()
 {
 	inorderUpdate(root);
@@ -236,5 +246,35 @@ Soldier AVLTree::popLeaf()
 	leaves.pop_back();
 	Soldier s = this->removeSoldier(pop_power);
 	return s;
+}
+
+Soldier AVLTree::findDefender(int attacker_power)
+{
+	AVLNode* temp = this->root;
+	int def = abs(root->key - attacker_power);
+	while (temp)
+	{
+		if (abs(temp->key - attacker_power) < def)
+		{
+			def = abs(temp->key - attacker_power);
+		}
+		else
+			break;
+		if (attacker_power > temp->key)
+		{
+			temp = temp->right;
+		}
+		else if (attacker_power < temp->key)
+		{
+			temp = temp->left;
+		}
+		else
+		{
+			return temp->data;
+		}
+	}
+
+	return temp->data;
+
 }
 

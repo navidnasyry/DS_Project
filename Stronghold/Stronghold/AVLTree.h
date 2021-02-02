@@ -34,8 +34,10 @@ public:
 	void inorder(AVLNode* t);
 	void inorderUpdate(AVLNode* t);
 	void display();
+	bool isLeavesIsEmpty();
 	void updateLeavese();//when leaves Vector become empty then call this function**==> **importantl**
 	Soldier popLeaf();
+	Soldier findDefender(int attacker_power);
 	//remove from tree maybe have bug
 	//just search and remove whit power of soldier  
 	//if our soldier from different castle by same power then we cant recognize them

@@ -15,34 +15,43 @@ using namespace std;
 int main()
 {
 	/*
-	int n = 0;
-	cin >> n;
-	int* input = new int [n*n];
-	for (int i=0 ; i<n ; i++)
-	{
-		for (int j=0 ; j<n;j++)
-		{
-			cin >> input[i*n + j];
-		}
+	input : 
+	5
+		0 0 0 1 1
+		0 0 1 1 1
+		0 1 0 0 1
+		1 1 0 0 0
+		1 1 1 0 0
+		*/
+	//int n = 0;
+	//cin >> n;
+	//int* input = new int[n * n];
+	//for (int i = 0; i < n; i++)
+	//{
+	//	for (int j = 0; j < n; j++)
+	//	{
+	//		cin >> input[i * n + j];
+	//	}
 
-	}
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			cout << input[i * n + j]<<" ";
-		}
-		cout << endl;
-	}
-	int sp;
-	cin >> sp;
-	Map head(n , sp);
-	head.deBug();
-	head.convertMatrisToEdge(input , n);
-	head.deBug();
-
-	*/
-	
+	//}
+	//for (int i = 0; i < n; i++)
+	//{
+	//	for (int j = 0; j < n; j++)
+	//	{
+	//		cout << input[i * n + j] << " ";
+	//	}
+	//	cout << endl;
+	//}
+	//int sp;
+	//cin >> sp;
+	//Map head(n, sp);
+	//head.deBug();
+	//head.convertMatrisToEdge(input, n);
+	//head.deBug();
+	//cout << "\n\n BFS : \n\n";
+	//head.BFS();
+	//
+	//
 	int time = 0;
 	FibonacciHeapTree fht;
 	while (++time)
@@ -58,7 +67,7 @@ int main()
 		}
 	}
 
-	fht.extractMin();
+	fht.del(13);// :(
 	fht.display();
 
 

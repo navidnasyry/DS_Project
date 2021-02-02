@@ -26,7 +26,7 @@ public:
 	
 	Vector<T>(const Vector<T>& vec);
 	
-	T operator[](int index);
+	T& operator[](int index);
 	
 	Vector<T> operator=(Vector<T> r_d);
 	
@@ -170,14 +170,14 @@ template<class T>
 }
 */
 template<class T>
- T Vector<T>:: operator[](int index)
+ T& Vector<T>:: operator[](int index)
 {
-	if (index < size_type)
+	if (index >= size_type)
 	{
-		T my_T = this->data[index];
-		return my_T;
+		throw "Index out of size";
 	}
-	return nullptr;
+	T my_T = this->data[index];
+	return my_T;
 }
 
 
