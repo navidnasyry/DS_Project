@@ -27,11 +27,15 @@ public:
 	Map(size_t n_castle , size_t sp);
 	~Map();
 
+	bool reviveSoldierFromStack(int index);
+	void enterEnemyFromQueue(int index);
+	void mainFunction();
 	bool addAdge(int castle_1 , int castle_2 , int waight);
 	bool convertMatrisToEdge(int matrix[] , int n);
 	void deBug();
 	void BFS();
 	bool updateCastle(int caslte_key);
+	void attackArmy(int index);
 	void checkArmy();
 
 };

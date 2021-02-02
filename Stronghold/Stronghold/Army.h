@@ -25,6 +25,8 @@ public:
 	bool lowDistance(int sp);
 	Soldier popSoldier();
 	bool isEmpty();
+	size_t getFromWhich();
+	size_t getAttackTo();
 
 };
 

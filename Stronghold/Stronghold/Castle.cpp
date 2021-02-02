@@ -13,6 +13,7 @@ Castle::Castle()
 {
 	int num_of_neighbor = Map::number_of_castle;
 	this->key = create_castle_key();
+	owner_key = key;
 	this->neighbors = new int[num_of_neighbor];
 	this->num_of_soldier_in_castle = 0;
 	for (int i=0 ; i<num_of_neighbor ; i++)
@@ -36,6 +37,12 @@ void Castle::addSoldier(int p)
 	new_s.power = p;
 	new_s.castle_key = this->key;
 	avl.insertSoldier(new_s);
+}
+
+void Castle::addSoldierToQueue(Soldier s)
+{
+	this->inder_queue.Push(s);
+	return;
 }
 
 bool Castle::sendArmy()

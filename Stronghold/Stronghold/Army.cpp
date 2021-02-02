@@ -56,3 +56,13 @@ bool Army::isEmpty()
 	}
 	return false;
 }
+
+size_t Army::getFromWhich()
+{
+	return this->from_which;
+}
+
+size_t Army::getAttackTo()
+{
+	return this->attack_to;
+}
