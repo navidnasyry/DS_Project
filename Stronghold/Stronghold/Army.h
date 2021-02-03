@@ -13,12 +13,15 @@ class Army
 	int speed;
 	int num_of_soldier;
 
-	QueueLinkedList<Soldier> army_soldier;
 
 
 
 public:
+	QueueLinkedList<Soldier> army_soldier;
+
 	Army();
+	Army(const Army&);
+	Army(Army&&);
 	Army(int num_of_soldier, size_t from, size_t attack_to, int distance);
 	~Army();
 	void addSoldier(Soldier s);
@@ -27,7 +30,8 @@ public:
 	bool isEmpty();
 	size_t getFromWhich();
 	size_t getAttackTo();
-
+	Army& operator=(const Army& r_val);
+	int getDistanse() { return this->distance; }
 };
 
 

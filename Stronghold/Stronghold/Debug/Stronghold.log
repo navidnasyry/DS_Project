@@ -1,35 +1,50 @@
-﻿  AVLTree.cpp
+﻿  Map.cpp
 F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(80): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
 F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(89): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
 F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(110): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
 F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(120): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
 F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(141): warning C4812: obsolete declaration style: please use 'Vector<T>::Vector' instead
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(80): warning C4812: obsolete declaration style: please use 'Vector<AVLNode>::Vector' instead
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(81): note: while compiling class template member function 'Vector<AVLNode>::Vector(void)'
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\AVLTree.cpp(11): note: see reference to function template instantiation 'Vector<AVLNode>::Vector(void)' being compiled
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\AVLTree.h(17): note: see reference to class template instantiation 'Vector<AVLNode>' being compiled
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(272): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(244): note: while compiling class template member function 'void Vector<AVLNode>::add_front(const T &)'
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(67): warning C4244: '=': conversion from 'double' to 'size_t', possible loss of data
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(75): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(115): warning C4018: '>=': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(161): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(176): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(198): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(212): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(233): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(280): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(285): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(298): warning C4018: '>': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(300): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(310): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(331): warning C4244: 'argument': conversion from '__int64' to 'size_t', possible loss of data
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(348): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(363): warning C4018: '<': signed/unsigned mismatch
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(141): warning C4812: obsolete declaration style: please use 'Vector<Soldier>::Vector' instead
+  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(142): note: while compiling class template member function 'Vector<Soldier>::Vector(const Vector<Soldier> &)'
+  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(228): note: see reference to function template instantiation 'Vector<Soldier>::Vector(const Vector<Soldier> &)' being compiled
+  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(206): note: while compiling class template member function 'void Vector<Soldier>::push_back(const T &)'
           with
           [
-              T=AVLNode
+              T=Soldier
           ]
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\AVLTree.cpp(253): note: see reference to function template instantiation 'void Vector<AVLNode>::add_front(const T &)' being compiled
+  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Map.cpp(58): note: see reference to function template instantiation 'void Vector<Soldier>::push_back(const T &)' being compiled
           with
           [
-              T=AVLNode
+              T=Soldier
           ]
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(141): warning C4812: obsolete declaration style: please use 'Vector<AVLNode>::Vector' instead
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(142): note: while compiling class template member function 'Vector<AVLNode>::Vector(const Vector<AVLNode> &)'
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(265): note: see reference to function template instantiation 'Vector<AVLNode>::Vector(const Vector<AVLNode> &)' being compiled
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(81): note: while compiling class template member function 'Vector<AVLNode>::Vector(void)'
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\AVLTree.cpp(11): note: see reference to function template instantiation 'Vector<AVLNode>::Vector(void)' being compiled
+  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Castle.h(25): note: see reference to class template instantiation 'Vector<Soldier>' being compiled
 F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(143): warning C4244: 'initializing': conversion from 'const __int64' to 'unsigned int', possible loss of data
-F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(110): warning C4812: obsolete declaration style: please use 'Vector<AVLNode>::Vector' instead
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(111): note: while compiling class template member function 'Vector<AVLNode>::Vector(__int64)'
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(258): note: see reference to function template instantiation 'Vector<AVLNode>::Vector(__int64)' being compiled
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(110): warning C4812: obsolete declaration style: please use 'Vector<Soldier>::Vector' instead
+  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(111): note: while compiling class template member function 'Vector<Soldier>::Vector(__int64)'
+  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(220): note: see reference to function template instantiation 'Vector<Soldier>::Vector(__int64)' being compiled
 F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(114): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
 F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(189): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(187): note: while compiling class template member function 'Vector<AVLNode> Vector<AVLNode>::operator =(Vector<AVLNode>)'
-  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(265): note: see reference to function template instantiation 'Vector<AVLNode> Vector<AVLNode>::operator =(Vector<AVLNode>)' being compiled
+  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(187): note: while compiling class template member function 'Vector<Soldier> Vector<Soldier>::operator =(Vector<Soldier>)'
+  F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\Vector.h(228): note: see reference to function template instantiation 'Vector<Soldier> Vector<Soldier>::operator =(Vector<Soldier>)' being compiled
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\QueueLinkedList.h(144): warning C4172: returning address of local variable or temporary: del_data
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\QueueLinkedList.h(156): warning C4172: returning address of local variable or temporary: del_data
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\QueueLinkedList.h(144): warning C4172: returning address of local variable or temporary: del_data
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\QueueLinkedList.h(156): warning C4172: returning address of local variable or temporary: del_data
+F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Stronghold\StackLinkedList.h(132): warning C4172: returning address of local variable or temporary: delete_data
   Stronghold.vcxproj -> F:\Data Structur Projects\TheEnd\ds_project\Stronghold\Debug\Stronghold.exe

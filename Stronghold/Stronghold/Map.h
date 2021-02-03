@@ -4,6 +4,7 @@
 #include "Castle.h"
 #include "Army.h"
 #include "Vector.h"
+#include <vector>
 
 class Map
 {
@@ -11,7 +12,7 @@ private:
 	friend class Castle;
 	//friend class AVLTree;
 
-	Vector<Army> all_army;
+	vector<Army> all_army;
 	Castle* castles;
 
 public:
@@ -37,9 +38,10 @@ public:
 	bool updateCastle(int caslte_key);
 	void attackArmy(int index);
 	void checkArmy();
-	void inputSoldier(int index , Soldier s);
+	void inputSoldier(int index , Soldier s , float st);
 	void writeBFS();
 	void writeInorderAVL();
+	void displayMap();
 
 
 

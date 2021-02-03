@@ -153,7 +153,7 @@ AVLNode* AVLTree::remove(int p, AVLNode* t)
 		temp = nullptr;
 	}
 	if (t == nullptr)
-		return t;
+		return nullptr;
 
 	//if (t != nullptr) {
 		t->height = max(height(t->left), height(t->right)) + 1;
@@ -179,8 +179,8 @@ AVLNode* AVLTree::remove(int p, AVLNode* t)
 			return doubleLeftRotate(t);
 		}
 	//}
-	else
-		return nullptr;
+	//else
+		return t;
 }
 
 Soldier AVLTree::removeSoldier(int power)

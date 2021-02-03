@@ -21,6 +21,26 @@ Army::Army(int num_of_soldier, size_t from, size_t attack_to, int distance)
 	return;
 }
 
+Army::Army(const Army& a)
+{
+	this->attack_to = a.attack_to;
+	this->from_which = a.from_which;
+	this->num_of_soldier = a.num_of_soldier;
+	this->distance = a.distance;
+	this->speed = a.speed;
+	this->army_soldier = a.army_soldier;
+}
+
+Army::Army(Army&& a)
+{
+	this->attack_to = a.attack_to;
+	this->from_which = a.from_which;
+	this->num_of_soldier = a.num_of_soldier;
+	this->distance = a.distance;
+	this->speed = a.speed;
+	this->army_soldier = a.army_soldier;
+}
+
 Army::~Army()
 {
 }
@@ -65,4 +85,15 @@ size_t Army::getFromWhich()
 size_t Army::getAttackTo()
 {
 	return this->attack_to;
+}
+
+Army& Army ::operator=(const Army& a)
+{
+	this->attack_to = a.attack_to;
+	this->from_which = a.from_which;
+	this->num_of_soldier = a.num_of_soldier;
+	this->distance = a.distance;
+	this->speed = a.speed;
+	this->army_soldier = a.army_soldier;
+	return *this;
 }

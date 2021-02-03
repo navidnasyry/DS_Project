@@ -53,15 +53,18 @@ int main()
 	cin >> cap_of_exit;
 
 	Map head(n, sp , cap_of_exit);
-	//head.deBug();
+	head.deBug();
 	head.convertMatrisToEdge(input, n);
-	//head.deBug();
+	head.deBug();
 	cout << "\n\n BFS : \n\n";
 	head.writeBFS();
 	cout << endl;
 	
 	for (int i=0 ; i<n ; i++)
 	{
+		float stack_ = 0.5;
+		cout << "Enter capacity of Stack : \n";
+		cin >> stack_;
 		cout << "Enter number of soldier for castle " << i <<" :"<< endl;
 		int num_of_s;
 		cin >> num_of_s;
@@ -70,10 +73,10 @@ int main()
 		for (int j=0 ; j<num_of_s ; j++)
 		{
 			int power;
-			//cin >> power;
+			cin >> power;
 			power = i +j+ 10;
 			Soldier new_s(power, i);
-			head.inputSoldier(i, new_s);
+			head.inputSoldier(i, new_s , stack_);
 		}
 
 	}

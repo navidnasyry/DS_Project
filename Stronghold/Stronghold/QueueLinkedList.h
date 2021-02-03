@@ -25,8 +25,41 @@ public:
 	T& getFirst();
 	int Size();
 	int Find(const T& target);
+	T& operator[](int index);
 	//void print();
+	QueueLinkedList& operator=(const QueueLinkedList& r_val);
+
 };
+
+template<class T>
+QueueLinkedList<T>& QueueLinkedList<T> ::operator=(const QueueLinkedList<T>& a)
+{
+	this->rear = a.rear;
+	return *this;
+}
+
+
+template<class T>
+T& QueueLinkedList<T>:: operator[](int index)
+{
+	if (index >= size)
+	{
+		//throw "Index out of size";
+	}
+	T my_T ;
+	Node<T>* temp = this->rear;
+	for(int i=0 ; i<size ; i++)
+	{
+		if (i == index)
+		{
+			my_T = temp->data;
+			break;
+		}
+	}
+	
+	return my_T;
+}
+
 
 template<class T>
 bool QueueLinkedList<T>::isEmpty()
@@ -57,6 +90,10 @@ QueueLinkedList<T>::~QueueLinkedList()
 		temp = nullptr;
 		delete temp;
 		temp = next_del;
+		if (rear == temp)
+		{
+			break;
+		}
 	}
 	rear = nullptr;
 	return;
@@ -96,7 +133,7 @@ T& QueueLinkedList<T>::Pop()
 	// First => second => third => ... => Rear =>First(del) =>second =>...
 	if (!rear)
 	{
-		throw "Queue is empty";
+		//throw "Queue is empty";
 	}
 	if (rear->next ==rear)
 	{
